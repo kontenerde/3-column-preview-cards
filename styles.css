@@ -35,16 +35,30 @@ p {
 }
 
 body {
-  align-items: center;
   display: flex;
-  max-width: 800px;
-  margin: 0 auto;
-  height: 100vh;
+  justify-content: center;
   border-radius: 10px;
 }
-.col {
-  display: table;
-  width: 100%;
+.container {
+  overflow: hidden;
+  margin: 1.5em 0;
+  width: 80%;
+  border-radius: 10px;
+  min-width: 320px;
+  max-width: 320px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  max-width: 28em;
+  align-items: start;
 }
 .sedans {
   background-color: var(--color-bright-orange);
@@ -58,8 +72,44 @@ body {
 
 .logo {
   margin: 35px 0 5px 40px;
-  width: -50%;
+  width: 50px;
 }
 .button {
   margin: 70px 0 40px 40px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--color-light-gray);
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition-duration: 800ms;
+}
+.btn1 {
+  color: var(--color-bright-orange);
+}
+.btn2 {
+  color: var(--color-dark-cyan);
+}
+.btn3 {
+  color: var(--color-very-dark-cyan);
+}
+.button:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border: solid 1px #fff;
+}
+
+@media (min-width: 62em) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    max-width: 65%;
+  }
+
+  .card__content {
+    margin-bottom: 4em;
+  }
 }
