@@ -109,8 +109,4 @@ main {
     width: 75%;
     max-width: 65%;
   }
-
-  .card__content {
-    margin-bottom: 4em;
-  }
 }
